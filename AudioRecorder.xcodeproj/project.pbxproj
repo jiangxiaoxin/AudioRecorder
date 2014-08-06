@@ -21,6 +21,15 @@
 		50C8365919920A8700C7AE54 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C8363B19920A8700C7AE54 /* UIKit.framework */; };
 		50C8366119920A8700C7AE54 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50C8365F19920A8700C7AE54 /* InfoPlist.strings */; };
 		50C8366319920A8700C7AE54 /* AudioRecorderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C8366219920A8700C7AE54 /* AudioRecorderTests.m */; };
+		50C8367D19920AA800C7AE54 /* AudioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C8366E19920AA800C7AE54 /* AudioButton.m */; };
+		50C8367E19920AA800C7AE54 /* ProgressLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C8367019920AA800C7AE54 /* ProgressLayers.m */; };
+		50C8367F19920AA800C7AE54 /* AudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C8367319920AA800C7AE54 /* AudioRecorder.m */; };
+		50C8368019920AA800C7AE54 /* black_bg_ip5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50C8367419920AA800C7AE54 /* black_bg_ip5@2x.png */; };
+		50C8368119920AA800C7AE54 /* mic_normal_358x358@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50C8367519920AA800C7AE54 /* mic_normal_358x358@2x.png */; };
+		50C8368219920AA800C7AE54 /* mic_talk_358x358@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50C8367619920AA800C7AE54 /* mic_talk_358x358@2x.png */; };
+		50C8368319920AA800C7AE54 /* VoiceHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C8367819920AA800C7AE54 /* VoiceHud.m */; };
+		50C8368419920AA800C7AE54 /* wave70x117@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50C8367919920AA800C7AE54 /* wave70x117@2x.png */; };
+		50C8368519920AA800C7AE54 /* AudioSessionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C8367C19920AA800C7AE54 /* AudioSessionConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,20 @@
 		50C8365E19920A8700C7AE54 /* AudioRecorderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AudioRecorderTests-Info.plist"; sourceTree = "<group>"; };
 		50C8366019920A8700C7AE54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		50C8366219920A8700C7AE54 /* AudioRecorderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioRecorderTests.m; sourceTree = "<group>"; };
+		50C8366D19920AA800C7AE54 /* AudioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioButton.h; sourceTree = "<group>"; };
+		50C8366E19920AA800C7AE54 /* AudioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioButton.m; sourceTree = "<group>"; };
+		50C8366F19920AA800C7AE54 /* ProgressLayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressLayers.h; sourceTree = "<group>"; };
+		50C8367019920AA800C7AE54 /* ProgressLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressLayers.m; sourceTree = "<group>"; };
+		50C8367219920AA800C7AE54 /* AudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioRecorder.h; sourceTree = "<group>"; };
+		50C8367319920AA800C7AE54 /* AudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioRecorder.m; sourceTree = "<group>"; };
+		50C8367419920AA800C7AE54 /* black_bg_ip5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black_bg_ip5@2x.png"; sourceTree = "<group>"; };
+		50C8367519920AA800C7AE54 /* mic_normal_358x358@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic_normal_358x358@2x.png"; sourceTree = "<group>"; };
+		50C8367619920AA800C7AE54 /* mic_talk_358x358@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic_talk_358x358@2x.png"; sourceTree = "<group>"; };
+		50C8367719920AA800C7AE54 /* VoiceHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceHud.h; sourceTree = "<group>"; };
+		50C8367819920AA800C7AE54 /* VoiceHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceHud.m; sourceTree = "<group>"; };
+		50C8367919920AA800C7AE54 /* wave70x117@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wave70x117@2x.png"; sourceTree = "<group>"; };
+		50C8367B19920AA800C7AE54 /* AudioSessionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSessionConfig.h; sourceTree = "<group>"; };
+		50C8367C19920AA800C7AE54 /* AudioSessionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSessionConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +135,9 @@
 		50C8363D19920A8700C7AE54 /* AudioRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				50C8366C19920AA800C7AE54 /* AudioButton */,
+				50C8367119920AA800C7AE54 /* AudioRecorder */,
+				50C8367A19920AA800C7AE54 /* AudioSessionConfig */,
 				50C8364619920A8700C7AE54 /* AppDelegate.h */,
 				50C8364719920A8700C7AE54 /* AppDelegate.m */,
 				50C8364919920A8700C7AE54 /* Main.storyboard */,
@@ -150,6 +176,41 @@
 				50C8365F19920A8700C7AE54 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50C8366C19920AA800C7AE54 /* AudioButton */ = {
+			isa = PBXGroup;
+			children = (
+				50C8366D19920AA800C7AE54 /* AudioButton.h */,
+				50C8366E19920AA800C7AE54 /* AudioButton.m */,
+				50C8366F19920AA800C7AE54 /* ProgressLayers.h */,
+				50C8367019920AA800C7AE54 /* ProgressLayers.m */,
+			);
+			path = AudioButton;
+			sourceTree = "<group>";
+		};
+		50C8367119920AA800C7AE54 /* AudioRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				50C8367219920AA800C7AE54 /* AudioRecorder.h */,
+				50C8367319920AA800C7AE54 /* AudioRecorder.m */,
+				50C8367419920AA800C7AE54 /* black_bg_ip5@2x.png */,
+				50C8367519920AA800C7AE54 /* mic_normal_358x358@2x.png */,
+				50C8367619920AA800C7AE54 /* mic_talk_358x358@2x.png */,
+				50C8367719920AA800C7AE54 /* VoiceHud.h */,
+				50C8367819920AA800C7AE54 /* VoiceHud.m */,
+				50C8367919920AA800C7AE54 /* wave70x117@2x.png */,
+			);
+			path = AudioRecorder;
+			sourceTree = "<group>";
+		};
+		50C8367A19920AA800C7AE54 /* AudioSessionConfig */ = {
+			isa = PBXGroup;
+			children = (
+				50C8367B19920AA800C7AE54 /* AudioSessionConfig.h */,
+				50C8367C19920AA800C7AE54 /* AudioSessionConfig.m */,
+			);
+			path = AudioSessionConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +289,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C8368419920AA800C7AE54 /* wave70x117@2x.png in Resources */,
 				50C8365019920A8700C7AE54 /* Images.xcassets in Resources */,
+				50C8368219920AA800C7AE54 /* mic_talk_358x358@2x.png in Resources */,
 				50C8364219920A8700C7AE54 /* InfoPlist.strings in Resources */,
+				50C8368119920AA800C7AE54 /* mic_normal_358x358@2x.png in Resources */,
+				50C8368019920AA800C7AE54 /* black_bg_ip5@2x.png in Resources */,
 				50C8364B19920A8700C7AE54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +315,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C8364E19920A8700C7AE54 /* ViewController.m in Sources */,
+				50C8367E19920AA800C7AE54 /* ProgressLayers.m in Sources */,
+				50C8368319920AA800C7AE54 /* VoiceHud.m in Sources */,
+				50C8368519920AA800C7AE54 /* AudioSessionConfig.m in Sources */,
+				50C8367F19920AA800C7AE54 /* AudioRecorder.m in Sources */,
 				50C8364819920A8700C7AE54 /* AppDelegate.m in Sources */,
+				50C8367D19920AA800C7AE54 /* AudioButton.m in Sources */,
 				50C8364419920A8700C7AE54 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
