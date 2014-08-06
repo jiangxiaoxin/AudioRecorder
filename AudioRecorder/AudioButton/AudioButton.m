@@ -44,7 +44,7 @@
         [player stop];
         player = nil;
     }
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[AudioSessionConfig instance] unregisterAudioSessionNotificationFor:self];
 }
 
 -(void)setupWithFrame:(CGRect)frame isRound:(BOOL)isRound backgroundColor:(UIColor *)aBackgroundColor audioPath:(NSURL *)anAudioUrl{

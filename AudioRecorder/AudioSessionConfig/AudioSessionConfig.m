@@ -32,6 +32,10 @@
     }
 }
 
+-(void)unregisterAudioSessionNotificationFor:(id<AudioSessionConfigDelegate>)delegate{
+    [[NSNotificationCenter defaultCenter] removeObserver:delegate name:AVAudioSessionRouteChangeNotification object:nil];
+}
+
 -(void)configAudioSession{
     isConfigured = YES;
     

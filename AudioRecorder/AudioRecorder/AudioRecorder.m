@@ -58,7 +58,7 @@
     if (audioRecorder.isRecording) {
         [audioRecorder stop];
     }
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[AudioSessionConfig instance] unregisterAudioSessionNotificationFor:self];
 }
 
 -(BOOL) refreshRecorder{
@@ -88,8 +88,7 @@
     }
     audioRecorder.delegate = self;
     audioRecorder.meteringEnabled = YES;
-    [audioRecorder prepareToRecord];
-    return YES;
+    return [audioRecorder prepareToRecord];
 }
 
 -(BOOL)startRecord{

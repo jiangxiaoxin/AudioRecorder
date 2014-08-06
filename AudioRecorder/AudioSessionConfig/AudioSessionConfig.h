@@ -18,4 +18,5 @@
 
 +(id)instance;
 -(void)registerAudioSessionNotificationFor:(id<AudioSessionConfigDelegate>)delegate;
+-(void)unregisterAudioSessionNotificationFor:(id<AudioSessionConfigDelegate>)delegate;
 @end
