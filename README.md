@@ -2,11 +2,11 @@ AudioRecorder
 =============
 
 ###Preview
-![preview](https://github.com/azureatom/AudioRecorder/blob/master/AudioRecorder/screenshots/1.png?raw=true)
-![preview](https://github.com/azureatom/AudioRecorder/blob/master/AudioRecorder/screenshots/2.png?raw=true)
-![preview](https://github.com/azureatom/AudioRecorder/blob/master/AudioRecorder/screenshots/3.png?raw=true)
-![preview](https://github.com/azureatom/AudioRecorder/blob/master/AudioRecorder/screenshots/4.png?raw=true)
-![preview](https://github.com/azureatom/AudioRecorder/blob/master/AudioRecorder/screenshots/5.png?raw=true)
+<img src="./AudioRecorder/screenshots/1.png" align="middle" width="320" />
+<img src="./AudioRecorder/screenshots/2.png" align="middle" width="320" />
+<img src="./AudioRecorder/screenshots/3.png" align="middle" width="320" />
+<img src="./AudioRecorder/screenshots/4.png" align="middle" width="320" />
+<img src="./AudioRecorder/screenshots/5.png" align="middle" width="320" />
 
 ##Installation
 1. copy folder `AudioRecorder` and `AudioSessionConfig` to your project.
