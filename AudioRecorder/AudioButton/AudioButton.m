@@ -120,12 +120,17 @@
     
     if (player != nil) {
         if (player.playing) {
+//            NSLog(@"player isPlaying, stop first.");
             [self stop];
+        }
+        else{
+//            NSLog(@"player is not nil, but not playing.");
         }
         player = nil;
     }
     
     if (audioUrl == nil) {
+//        NSLog(@"audioUrl == nil.");
         return;
     }
     
@@ -135,11 +140,13 @@
         player.volume = 1.0f;
         player.delegate = self;
         [player prepareToPlay];
+//        NSLog(@"player prepareToPlay returns %d.", [player prepareToPlay]);
     }
 }
 
 -(void)buttonTouched{
     if (player == nil) {
+//        NSLog(@"player == nil, return");
         return;
     }
     
@@ -160,20 +167,30 @@
 }
 
 -(BOOL)play{
+//    NSLog(@"try to play");
     if ([player play]) {
         [progressLayers play];
         playState = AudioButtonStatePlaying;
         [self setNeedsDisplay];
+//        NSLog(@"play successfully.");
         return YES;
     }
+//    NSLog(@"play failed.");
     return NO;
 }
+
 -(void)stop{
-    [player stop];
-    [player setCurrentTime:0.0f];
-    [progressLayers stop];
-    playState = AudioButtonStateIdle;
-    [self setNeedsDisplay];
+    if (player != nil) {
+        [player stop];
+        [player setCurrentTime:0.0f];
+        [progressLayers stop];
+        playState = AudioButtonStateIdle;
+        [self setNeedsDisplay];
+//        NSLog(@"Player stopt	 successfully.");
+    }
+    else{
+        NSLog(@"Stop but player is nil.");
+    }
 }
 
 #pragma mark - AudioSessionConfigDelegate, AVAudioSession notification handlers
@@ -219,6 +236,7 @@
 #pragma mark AVAudioPlayer delegate methods
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)p successfully:(BOOL)flag
 {
+//    NSLog(@"AudioButton audioPlayerDidFinishPlaying.");
 	if (flag == NO)
 		NSLog(@"AudioButton Playback finished unsuccessfully");
     

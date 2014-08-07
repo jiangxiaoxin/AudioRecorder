@@ -76,10 +76,10 @@
     
     NSError *error = nil;
     
-    if ([[NSFileManager defaultManager] fileExistsAtPath:[audioFileUrl path]] && ![[NSFileManager defaultManager] removeItemAtPath:[audioFileUrl path] error:&error]) {
-        NSLog(@"Audio record error(remove file): %@", error.description);
-        return NO;
-    }
+//    if ([[NSFileManager defaultManager] fileExistsAtPath:[audioFileUrl path]] && ![[NSFileManager defaultManager] removeItemAtPath:[audioFileUrl path] error:&error]) {
+//        NSLog(@"Audio record error(remove file): %@", error.description);
+//        return NO;
+//    }
     
     audioRecorder = [[AVAudioRecorder alloc] initWithURL:audioFileUrl settings:recordSetting error:&error];
     if (error) {
@@ -92,6 +92,14 @@
 }
 
 -(BOOL)startRecord{
+    if ([self startRecordWithoutIndicator]) {
+        [self showRecordIndicator];
+        return YES;
+    }
+    return NO;
+}
+
+-(BOOL) startRecordWithoutIndicator{
     if (audioRecorder == nil) {
         return NO;
     }
@@ -99,16 +107,23 @@
     if ([audioRecorder recordForDuration:60]) {
         [self resetMeteringTimer];
         meteringTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateMeters) userInfo:nil repeats:YES];
-        
-        [self showVoiceHud];
         return YES;
     }
     return NO;
 }
 
+-(void) showRecordIndicator{
+    //must not create voiceHud when self init, because the outer view may not be layouted yet, thus has no correct frame for VoiceHud to setup with.
+    if (voiceHud == nil) {
+        voiceHud = [[VoiceHud alloc] init];
+    }
+    [voiceHud show];
+}
+
 -(void)stopRecord{
     [self resetMeteringTimer];
-    [self invalidateVoiceHud];
+    
+    [voiceHud hide];
     [audioRecorder stop];
 }
 
@@ -180,19 +195,6 @@
         [meteringTimer invalidate];
         meteringTimer = nil;
     }
-}
-
--(void)invalidateVoiceHud{
-    if (voiceHud) {
-        [voiceHud hide];
-        voiceHud = nil;
-    }
-}
-
--(void)showVoiceHud{
-    [self invalidateVoiceHud];
-    voiceHud = [[VoiceHud alloc] init];
-    [voiceHud show];
 }
 
 #pragma mark AVAudioSession notification handlers

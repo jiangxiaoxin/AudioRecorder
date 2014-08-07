@@ -19,5 +19,5 @@ typedef enum {
 @property(copy, nonatomic) NSURL *audioUrl;
 
 -(void)setupWithFrame:(CGRect)frame isRound:(BOOL)isRound backgroundColor:(UIColor *)aBackgroundColor audioPath:(NSURL *)anAudioUrl;
-
+-(void)stop;
 @end

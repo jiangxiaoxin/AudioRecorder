@@ -139,20 +139,24 @@
 }
 
 -(void) createMainUI{
-    const CGFloat kStatusBarHeight = 20.0f;
-    const CGFloat kScreenWidth = [UIScreen mainScreen].bounds.size.width;
-    const CGFloat kScreenHeight = [UIScreen mainScreen].bounds.size.height - kStatusBarHeight;
+//    const CGFloat kStatusBarHeight = 20.0f;
+//    const CGFloat kScreenWidth = [UIScreen mainScreen].bounds.size.width;
+//    const CGFloat kScreenHeight = [UIScreen mainScreen].bounds.size.height - kStatusBarHeight;
+    const CGFloat kMicSide = 179;
     
-    UIImageView * backBlackImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight, kScreenWidth, kScreenHeight)];
-    backBlackImageView.image = [UIImage imageNamed:@"black_bg_ip5.png"];
+//    UIImageView * backBlackImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight, kScreenWidth, kScreenHeight)];
+    UIImageView * backBlackImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 230, 280)];
+    backBlackImageView.image = [UIImage imageNamed:@"mic_bg_460x560.png"];
+    backBlackImageView.alpha = 0.618f;
+    backBlackImageView.center = self.center;
     [self addSubview:backBlackImageView];
     
     UIImageView * micNormalImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mic_normal_358x358.png"]];
-    micNormalImageView.frame = CGRectMake(kScreenWidth / 2 - 164 / 2, 200, 179, 179);
+    micNormalImageView.frame = CGRectMake(0, 0, kMicSide, kMicSide);
     micNormalImageView.center = self.center;
     [self addSubview:micNormalImageView];
-    
-    talkingImageView = [[UIImageView alloc] initWithFrame:CGRectMake(164/2-50/2, 164/2-93.5/2, 179, 179)];
+
+    talkingImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kMicSide, kMicSide)];
     talkingImageView.image = [UIImage imageNamed:@"mic_talk_358x358.png"];
     [self addSubview:talkingImageView];
     talkingImageView.center = self.center;

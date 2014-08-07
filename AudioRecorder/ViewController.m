@@ -36,16 +36,20 @@
             NSLog(@"duration %f", duration);
             UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"录音结束" message:@"Canceled" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
             [alert show];
-            
-            wself.audioButton.audioUrl = nil;
         }
         else{
             CGFloat duration = [wself.audioRecorder duration];
             NSLog(@"duration %f", duration);
-            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"\nrecord finish ! \npath:%@ \nduration:%f",wself.audioRecorder.audioFileUrl.path,duration] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
-            [alert show];
+            UIAlertView *alert = nil;
+            if (duration < 1.0f) {
+                alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"record time is too short, please record again.\nduration:%f",duration] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+            }
+            else{
+                alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"\nrecord finish ! \npath:%@ \nduration:%f",wself.audioRecorder.audioFileUrl.path,duration] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+                wself.audioButton.audioUrl = wself.audioRecorder.audioFileUrl;
+            }
             
-            wself.audioButton.audioUrl = wself.audioRecorder.audioFileUrl;
+            [alert show];
         }
     }];
     
@@ -62,10 +66,10 @@
     [button addTarget:self action:@selector(recordCancel) forControlEvents:UIControlEventTouchUpOutside];
 }
 
-
 -(void) recordStart
 {
     if ([audioRecorder refreshRecorder]) {
+        audioButton.audioUrl = nil;
         [audioRecorder startRecord];
     }
 }
