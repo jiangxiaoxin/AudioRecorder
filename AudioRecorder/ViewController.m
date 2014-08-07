@@ -76,7 +76,7 @@
 
 -(void) recordEnd
 {
-    [audioRecorder stopRecordWithCompletionBlock:nil];
+//    [audioRecorder stopRecordWithCompletionBlock:nil];
 }
 
 -(void) recordCancel

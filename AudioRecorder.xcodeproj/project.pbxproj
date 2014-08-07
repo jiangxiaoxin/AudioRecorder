@@ -11,7 +11,6 @@
 		507CF45D1992132B00BA2B1C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 507CF4581992132B00BA2B1C /* 2.png */; };
 		507CF45E1992132B00BA2B1C /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 507CF4591992132B00BA2B1C /* 3.png */; };
 		507CF45F1992132B00BA2B1C /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 507CF45A1992132B00BA2B1C /* 4.png */; };
-		507CF4601992132B00BA2B1C /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 507CF45B1992132B00BA2B1C /* 5.png */; };
 		50C8363819920A8700C7AE54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C8363719920A8700C7AE54 /* Foundation.framework */; };
 		50C8363A19920A8700C7AE54 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C8363919920A8700C7AE54 /* CoreGraphics.framework */; };
 		50C8363C19920A8700C7AE54 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C8363B19920A8700C7AE54 /* UIKit.framework */; };
@@ -52,7 +51,6 @@
 		507CF4581992132B00BA2B1C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		507CF4591992132B00BA2B1C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		507CF45A1992132B00BA2B1C /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
-		507CF45B1992132B00BA2B1C /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		50C8363419920A8700C7AE54 /* AudioRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C8363719920A8700C7AE54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		50C8363919920A8700C7AE54 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,7 +117,6 @@
 				507CF4581992132B00BA2B1C /* 2.png */,
 				507CF4591992132B00BA2B1C /* 3.png */,
 				507CF45A1992132B00BA2B1C /* 4.png */,
-				507CF45B1992132B00BA2B1C /* 5.png */,
 			);
 			path = screenshots;
 			sourceTree = "<group>";
@@ -322,7 +319,6 @@
 				507CF45E1992132B00BA2B1C /* 3.png in Resources */,
 				50C8368119920AA800C7AE54 /* mic_normal_358x358@2x.png in Resources */,
 				507CF45D1992132B00BA2B1C /* 2.png in Resources */,
-				507CF4601992132B00BA2B1C /* 5.png in Resources */,
 				50C8364B19920A8700C7AE54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
