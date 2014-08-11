@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AudioRecorder.h"
 #import "AudioButton.h"
+#import "AudioSessionConfig.h"
 
 @interface ViewController ()
 @property(strong, nonatomic) AudioButton *audioButton;
@@ -71,17 +72,30 @@
     if ([audioRecorder refreshRecorder]) {
         audioButton.audioUrl = nil;
         [audioRecorder startRecord];
+        
+#if defined AutoTestRecordPlay
+        [self performSelector:@selector(recordEnd) withObject:nil afterDelay:5];
+#endif
     }
 }
 
 -(void) recordEnd
 {
-//    [audioRecorder stopRecordWithCompletionBlock:nil];
+    [audioRecorder stopRecordWithCompletionBlock:nil];
+    
+#if defined AutoTestRecordPlay
+    [audioButton performSelector:@selector(play) withObject:nil afterDelay:1];
+#endif
 }
 
 -(void) recordCancel
 {
     [audioRecorder cancelRecord];
+    
+#ifdef AutoTestRecordPlay
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(recordStart) userInfo:nil repeats:YES];
+    return;
+#endif
 }
 
 - (void)didReceiveMemoryWarning

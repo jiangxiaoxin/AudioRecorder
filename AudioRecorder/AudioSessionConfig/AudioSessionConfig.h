@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+//if want to test record and play many times automatically, uncomment this macro.
+#define AutoTestRecordPlay
+
 @protocol AudioSessionConfigDelegate<NSObject>
 @optional
 - (void)handleRouteChange:(NSNotification *)notification;

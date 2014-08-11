@@ -109,7 +109,9 @@
 #pragma mark - ProgressLayersDelegate
 -(CGFloat)currentProgress{
     if (player != nil && player.currentTime <= player.duration) {
-        return (CGFloat)player.currentTime / player.duration;
+        CGFloat process = (CGFloat)player.currentTime / player.duration;
+//        NSLog(@"play process: %f", process);
+        return process < -0.1f ? 0.0f : process;
     } else {
         return 0.0f;
     }
@@ -167,6 +169,10 @@
 }
 
 -(BOOL)play{
+#if defined AutoTestRecordPlay
+    [self performSelector:@selector(stop) withObject:nil afterDelay:2];
+#endif
+    
 //    NSLog(@"try to play");
     if ([player play]) {
         [progressLayers play];
@@ -186,7 +192,7 @@
         [progressLayers stop];
         playState = AudioButtonStateIdle;
         [self setNeedsDisplay];
-//        NSLog(@"Player stopt	 successfully.");
+//        NSLog(@"Player stopt successfully.");
     }
     else{
         NSLog(@"Stop but player is nil.");
