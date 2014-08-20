@@ -216,26 +216,26 @@
     NSLog(@"Previous route:%@", routeDescription);
     switch (reasonValue) {
         case AVAudioSessionRouteChangeReasonNewDeviceAvailable://e.g. headphones have been plugged in
-            NSLog(@"AuidoButton routeChange: NewDeviceAvailable");
+            NSLog(@"AudioButton routeChange: NewDeviceAvailable");
             break;
         case AVAudioSessionRouteChangeReasonOldDeviceUnavailable://e.g. headphones have been unplugged
             [self stop];
-            NSLog(@"AuidoButton routeChange: OldDeviceUnavailable");
+            NSLog(@"AudioButton routeChange: OldDeviceUnavailable");
             break;
         case AVAudioSessionRouteChangeReasonCategoryChange:
-            NSLog(@"AuidoButton routeChange: CategoryChange to %@", [[AVAudioSession sharedInstance] category]);
+            NSLog(@"AudioButton routeChange: CategoryChange to %@", [[AVAudioSession sharedInstance] category]);
             break;
         case AVAudioSessionRouteChangeReasonOverride:
-            NSLog(@"AuidoButton routeChange: Override");
+            NSLog(@"AudioButton routeChange: Override");
             break;
         case AVAudioSessionRouteChangeReasonWakeFromSleep:
-            NSLog(@"AuidoButton routeChange: WakeFromSleep");
+            NSLog(@"AudioButton routeChange: WakeFromSleep");
             break;
         case AVAudioSessionRouteChangeReasonNoSuitableRouteForCategory:
-            NSLog(@"AuidoButton routeChange: NoSuitableRouteForCategory");
+            NSLog(@"AudioButton routeChange: NoSuitableRouteForCategory");
             break;
         default:
-            NSLog(@"AuidoButton routeChange: ReasonUnknown");
+            NSLog(@"AudioButton routeChange: ReasonUnknown");
     }
 }
 

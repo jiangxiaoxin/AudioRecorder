@@ -38,14 +38,13 @@
          kAudioFormatAppleIMA4, 8000 ~= 252K
          */
         recordSetting = [[NSDictionary alloc] initWithObjectsAndKeys:
-                         [NSNumber numberWithInt:kAudioFormatMPEG4AAC], AVFormatIDKey,//录音格式,kAudioFormatAppleIMA4大概是kAudioFormatMPEG4AAC的两倍大小
+                         [NSNumber numberWithInt:kAudioFormatMPEG4AAC], AVFormatIDKey,//录音格式,kAudioFormatAppleIMA4大概是kAudioFormatMPEG4AAC的两倍大小.kAudioFormatLinearPCM是无损格式
                          [NSNumber numberWithFloat:16000.0f], AVSampleRateKey, //录音采样率(Hz) 如：AVSampleRateKey==8000/16000/44100/96000（影响音频的质量）
-                         [NSNumber numberWithInt:kAudioFormatLinearPCM], AVFormatIDKey,
                          [NSNumber numberWithInt:16], AVLinearPCMBitDepthKey,//线性采样位数8,16,24,32,默认 16
                          [NSNumber numberWithInt:1], AVNumberOfChannelsKey,//通道的数目,1 or 2.
                          [NSNumber numberWithInt:AVAudioQualityHigh], AVEncoderAudioQualityKey,//录音的质量
-                         //                                    [NSNumber numberWithBool:NO], AVLinearPCMIsBigEndianKey,//大端还是小端 是内存的组织方式
-                         //                                    [NSNumber numberWithBool:NO], AVLinearPCMIsFloatKey,//采样信号是整数还是浮点数
+//                                    [NSNumber numberWithBool:NO], AVLinearPCMIsBigEndianKey,//大端还是小端 是内存的组织方式
+//                                    [NSNumber numberWithBool:NO], AVLinearPCMIsFloatKey,//采样信号是整数还是浮点数
                          nil];
         
         //configure audio session, register notification for handleRouteChange.
